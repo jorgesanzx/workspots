@@ -4,6 +4,11 @@ html, body {
   height: 100%;
 }
 
+body {
+  font-family: helvetica, sans-serif;
+  font-size: 1em;
+}
+
 #__blaze-root {
   height: 100%;
 }

@@ -6,9 +6,10 @@
   background: #fff;
   border-radius: 50px;
   box-shadow: 5px 5px 5px rgba(100, 100, 100, .7);
+  cursor: pointer;
 }
 
-#addSpot::after {
+#addSpot:after {
   content: "+";
   font-size: 5em;
   font-weight: bold;
@@ -16,6 +17,10 @@
   width: 75px;
   height: 80px;
   text-align: center;
+}
+
+#addSpot:hover {
+  background: #eee;
 }
 
 #filters {

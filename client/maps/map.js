@@ -60,15 +60,25 @@ Template.map.onCreated(function() {
         //if a infowindow is opened -> close
         if (infoWindowOpen) infoWindowOpen.close();
 
-        var infowindowContent = '<h2>' + spot.name + '</h2>' +
-                                '<p><strong>Wi-Fi Quality:</strong> ' + spot.wiFiQuality +
-                                '<p><strong>Power Available:</strong> ' + spot.powerAvailable
+        var infowindowContent = `<h2><a href="geo:${spot.position.latitude},${spot.position.longitude}">${spot.name}</a></h2>
+                                <p><strong>Wi-Fi Quality:</strong> ${spot.wiFiQuality}
+                                <p><strong>Power Available:</strong> ${spot.powerAvailable}`
+        //add comments
+        if(spot.comments && spot.comments.length > 0) {
+          infowindowContent +=  `<p><strong>Comments:</strong></p>
+                                <ul>`;
+          spot.comments.forEach( function(comment){
+            infowindowContent += `<li>${comment}</li>`;
+          });
+
+          infowindowContent += `</ul>`;
+        }
         
         infowindow = new google.maps.InfoWindow({
           content: infowindowContent
         });
 
-        infowindow.open(map.instance, marker);
+        infowindow.open(map.instance, this);  
         infoWindowOpen = infowindow;
       });
     });

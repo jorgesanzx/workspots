@@ -8,16 +8,18 @@
   box-shadow: 0 0 5px rgba(100, 100, 100, .7);
 }
 
+.form-group {
+  margin-bottom: 1rem;
+}
 
-form label {
+label {
   display: block;
-  margin: 1.5rem 0 .5rem 0;
+  margin-bottom: .5rem;
 }
 
 form input:not([type=submit]):not([type=checkbox]),
 form textarea {
   display: block;
-  margin: .2em 0 1rem 0;
   border: 1px solid #888;
   border-radius: 5px;
   padding: .5rem 1rem;
@@ -25,6 +27,26 @@ form textarea {
   color: inherit;
   width: 80%;
 }
-form input[type=checkbox] {
-  margin: 1rem 0;
+
+input[type=checkbox] {
+  margin-right: 1rem;
 }
+
+.btn {
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px rgba(100, 100, 100, .7);
+  font-size: 16px;
+  padding: 10px;
+}
+
+.btn-default {
+  background: #FB7068;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-default:hover {
+  background: #F75448;
+}
+

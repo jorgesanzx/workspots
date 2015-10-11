@@ -1,5 +1,5 @@
 Template.spotForm.events({
-	"submit .spot-form": function(event) {
+	'submit .spot-form': function(event) {
 		event.preventDefault();
 
     if(!Geolocation.error()) {
@@ -24,5 +24,13 @@ Template.spotForm.events({
       //go home
       FlowRouter.go('/');      
     }
-	} 
+	},
+
+  'mouseenter .googleMapContainer': function(event){
+    event.preventDefault();
+
+    console.log('hola');
+    //go home
+    FlowRouter.go('/');
+  }
 });

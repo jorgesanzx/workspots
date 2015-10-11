@@ -1,25 +1,4 @@
-/* CSS declarations go here */
-
 .googleMapContainer {
   width: 100%;
   height: 100%;
-}
-
-.googleMapContainer + button {
-  position: absolute;
-  bottom: 30px;
-  right: 30px;
-  border: 1px solid #ccc;
-  background: #fff;
-  border-radius: 50px;
-  box-shadow: 5px 5px 5px rgba(100, 100, 100, .7);
-}
-.googleMapContainer + button::after {
-  content: "+";
-  font-size: 5em;
-  font-weight: bold;
-  display: block;
-  width: 75px;
-  height: 80px;
-  text-align: center;
 }

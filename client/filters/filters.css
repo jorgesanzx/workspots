@@ -1,0 +1,13 @@
+.filters {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.filter-group {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 5px 5px 5px rgba(100, 100, 100, .7);
+  margin-bottom: .5rem;
+  padding: .5rem;
+}

@@ -15,7 +15,7 @@ function showMarkers(map, spots) {
       marker.setMap(null);
     });
   }
-  
+
   function showSpot(spot) {
     marker = new google.maps.Marker({
       map: map.instance,
@@ -40,18 +40,18 @@ function showMarkers(map, spots) {
 
         infowindowContent += `</ul>`;
       }
-      
+
       infowindow = new google.maps.InfoWindow({
         content: infowindowContent
       });
 
-      infowindow.open(map.instance, this);  
+      infowindow.open(map.instance, this);
       infoWindowOpen = infowindow;
     });
 
     markers.push(marker);
   };
-  
+
   markers = [];
 
   console.log(spots);
@@ -82,7 +82,7 @@ Template.map.helpers({
       // Map initialization options
       return {
         center: new google.maps.LatLng(latLng.lat, latLng.lng),
-        zoom: 10,
+        zoom: 14,
         mapTypeId: google.maps.MapTypeId.ROADMAP
       };
     }
@@ -90,7 +90,7 @@ Template.map.helpers({
 
   getFilters: function() {
     var filters = Session.get('filters');
-    
+
     if(filters && filters.wifi && filters.power){
       var query = {
         wiFiQuality: {$gte: Number(filters.wifi)}

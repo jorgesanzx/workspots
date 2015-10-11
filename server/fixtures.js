@@ -54,6 +54,28 @@ Meteor.startup(function () {
         longitude: -3.7013815,
       }
     },
+
+    {
+      name: 'Cink Emprende',
+      wiFiQuality: 4,
+      powerAvailable: true,
+      comments: ['Nice venue, Cink Emprende'],
+      position: {
+        latitude: 40.4341611,
+        longitude: -3.6924041
+      }
+    },
+
+    {
+      name: 'AJE Madrid',
+      wiFiQuality: 2,
+      powerAvailable: true,
+      comments: ['Nice venue, AJE Madrid'],
+      position: {
+        latitude: 40.4460191,
+        longitude: -3.675816
+      }
+    },
   ];
 
   Spots.remove({});

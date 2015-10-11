@@ -22,11 +22,3 @@
 #addSpot:hover {
   background: #eee;
 }
-
-#filters {
-  position: absolute;
-  top: 30px;
-  right: 30px;
-  border: 1px solid #ccc;
-  background: #fff;
-}

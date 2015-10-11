@@ -17,3 +17,11 @@
   height: 80px;
   text-align: center;
 }
+
+#filters {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  border: 1px solid #ccc;
+  background: #fff;
+}

@@ -25,7 +25,9 @@ Template.map.helpers({
         mapTypeId: google.maps.MapTypeId.ROADMAP
       };
     }
-  }
+  },      
+
+
 });
 
 Template.map.onCreated(function() {
@@ -49,7 +51,7 @@ Template.map.onCreated(function() {
     var infowindow;
     var infoWindowOpen = null;
     var marker;
-    Spots.find().fetch().forEach(function(spot) {
+    function showSpot(spot) {
       marker = new google.maps.Marker({
         map: map.instance,
         position: {lat: spot.position.latitude, lng: spot.position.longitude},
@@ -81,6 +83,8 @@ Template.map.onCreated(function() {
         infowindow.open(map.instance, this);  
         infoWindowOpen = infowindow;
       });
-    });
+    };
+    
+    Spots.find().fetch().forEach(showSpot);
   });
 });

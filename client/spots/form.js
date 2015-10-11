@@ -29,7 +29,6 @@ Template.spotForm.events({
   'mouseenter .googleMapContainer': function(event){
     event.preventDefault();
 
-    console.log('hola');
     //go home
     FlowRouter.go('/');
   }

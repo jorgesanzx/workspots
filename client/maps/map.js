@@ -32,9 +32,18 @@ Template.map.onCreated(function() {
   GoogleMaps.load({ v: '3'});
 
   GoogleMaps.ready('testMap', function(map) {
+
+    var locationIcon = {
+      url: '/images/position.png',
+      size: new google.maps.Size(22, 22),
+      origin: new google.maps.Point(0, 0),
+      anchor: new google.maps.Point(11, 11)
+    };
+
     var userMarker = new google.maps.Marker({
       map: map.instance,
-      position: map.options.center
+      position: map.options.center,
+      icon: locationIcon
     });
 
     var infowindow;

@@ -9,11 +9,13 @@ Template.button.events({
   },
 
   "change #powerAvailable": function(event) {
-    FlowRouter.go('/?power=' + $('#powerAvailable').is(':checked') + '&wifi=' + $('#wiFiQuality').val());
+    var powerAvailable = $('#powerAvailable').is(':checked') ? "yes" : "no";
+    FlowRouter.go('/?power=' + powerAvailable + '&wifi=' + $('#wiFiQuality').val());
   },
 
   "change #wiFiQuality": function(event) {
-    FlowRouter.go('/?power=' + $('#powerAvailable').is(':checked') + '&wifi=' + $('#wiFiQuality').val());
+    var powerAvailable = $('#powerAvailable').is(':checked') ? "yes" : "no";
+    FlowRouter.go('/?power=' + powerAvailable + '&wifi=' + $('#wiFiQuality').val());
   },
 });
 

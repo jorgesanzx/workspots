@@ -1,4 +1,4 @@
-button {
+#addSpot {
   position: absolute;
   bottom: 30px;
   right: 30px;
@@ -8,7 +8,7 @@ button {
   box-shadow: 5px 5px 5px rgba(100, 100, 100, .7);
 }
 
-button::after {
+#addSpot::after {
   content: "+";
   font-size: 5em;
   font-weight: bold;

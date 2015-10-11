@@ -22,11 +22,17 @@ Template.map.onCreated(function() {
   GoogleMaps.load({ v: '3'});
 
   GoogleMaps.ready('testMap', function(map) {
-    //map = map.instance;
-    console.log(map);
     var marker = new google.maps.Marker({
-      position: map.options.center,
-      map: map.instance
+      map: map.instance,
+      position: map.options.center
+    });
+
+    Spots.find().fetch().forEach(function(spot) {
+      marker = new google.maps.Marker({
+        map: map.instance,
+        position: {lat: spot.position.latitude, lng: spot.position.longitude},
+        title: spot.name
+      });
     });
   });
 });
